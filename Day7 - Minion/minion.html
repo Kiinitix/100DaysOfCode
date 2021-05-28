@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>Day 6</title>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+    }
+
+    
+    .body{
+        width: 40vmin;
+        height: 60vmin;
+        background-color: #efdf21;
+        border-radius: 95% 86% 48% 47% / 57% 61% 49% 53%;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .container{
+        display:flex;
+        justify-content: center;
+        background-color: ghostwhite;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+    }
+    .outfit {
+        width: 50vmin;
+        height: 30vmin;
+        background-color: navy;
+        top: 70%;
+        position: absolute;
+    }
+    .outfit-between{
+        width: 30vmin;
+        height: 10vmin;
+        background-color: navy;
+        position: absolute;
+        top: 60%;
+        left: 13%;
+        
+    }
+    .strap-l{
+        width: 4vmin;
+        height: 20vmin;
+        background-color: navy;
+        transform: rotateZ(-40deg);
+        top: 22vmin;
+        position: absolute;
+    }
+    .strap-r{
+        width: 4vmin;
+        height: 20vmin;
+        background-color: navy;
+        transform: rotateZ(40deg);
+        top: 22vmin;
+        left:35vmin;
+        position: absolute;
+    }
+    .eye-l{
+        width: 15vmin;
+        height: 15vmin;
+        background-color: grey;
+        position: absolute;
+        border-radius: 50%;
+        top: 10vmin;
+        left: 13%;
+    }
+    .eye-r{
+        width: 15vmin;
+        height: 15vmin;
+        background-color: grey;
+        position: absolute;
+        border-radius: 50%;
+        top: 10vmin;
+        right: 13%;
+    }
+    .band-l{
+        width: 7vmin;
+        height: 4vmin;
+        background-color: black;
+        position: absolute;
+        top: 6vmin;
+        left: 28vmin;
+    }
+    .band-r{
+        width: 7vmin;
+        height: 4vmin;
+        background-color: black;
+        position: absolute;
+        top: 16vmin;
+        left: 0vmin;
+        
+    }
+    .white-eye-l{
+        width: 12vmin;
+        height: 12vmin;
+        background-color: white;
+        position:absolute;
+        top: 1.5vmin;
+        left: 10%;
+        border-radius: 50%;
+    }
+    .white-eye-r{
+        width: 12vmin;
+        height: 12vmin;
+        background-color: white;
+        position:absolute;
+        top: 1.5vmin;
+        right: 10%;
+        border-radius: 50%;
+    }
+    .brown-part-l{
+        width:5vmin;
+        height: 5vmin;
+        background-color: brown;
+        position: absolute;
+        top: 5vmin;
+        left: 32%;
+        border-radius: 50%;
+    }
+    .brown-part-r{
+        width:5vmin;
+        height: 5vmin;
+        background-color: brown;
+        position: absolute;
+        top: 5vmin;
+        left: 32%;
+        border-radius: 50%;
+    }
+    .black-part-l{
+        width:2.5vmin;
+        height: 2.5vmin;
+        background-color: black;
+        position: absolute;
+        top: 6.3vmin;
+        left: 40%;
+        border-radius: 50%;
+    }
+    .black-part-r{
+        width:2.5vmin;
+        height: 2.5vmin;
+        background-color: black;
+        position: absolute;
+        top: 6.2vmin;
+        left: 40%;
+        border-radius: 50%;
+    }
+    .mouth{
+        width:15vmin;
+        height: 6vmin;
+        border-radius: 0% 0% 52% 52% / 0% 1% 83% 81% ;
+        position: absolute;
+        background-color: white;
+        top: 28vmin;
+        left: 30%;
+    }
+    .left-leg{
+        width: 8vmin;
+        height: 6vmin;
+        background-color: navy;
+        position: relative;
+        top: 30vmin;
+        left: -35vmin;
+    }
+    .right-leg{
+        width: 8vmin;
+        height: 6vmin;
+        background-color: navy;
+        position: relative;
+        top: 31vmin;
+        left: -23vmin;
+    }
+    .left-shoe{
+        width:14vmin;
+        height:6vmin;
+        background-color: black;
+        position: absolute;
+        top:83vmin;
+        left:72.8vmin;
+        border-radius: 41% 0% 0% 100% / 78% 93% 0% 0% ;
+    }
+        .right-shoe{
+        width:14vmin;
+        height:6vmin;
+        background-color: black;
+        position: absolute;
+        top:83vmin;
+        left:98.8vmin;
+        border-radius: 0% 55% 0% 61% / 0% 69% 0% 0%  ;
+    }
+    .right-hand{
+        width: 6vmin;
+        height: 20vmin;
+        background-image: linear-gradient(#d8d812,#efdf21);
+        transform: rotateZ(25deg);
+        top:46vmin;
+        left:69.7vmin;
+        position: absolute;
+    }
+    .left-hand-fist{
+        width: 6vmin;
+        height: 4vmin;
+        background-color: black;
+        transform: rotateZ(-25deg);
+        top: 63.7vmin;
+        right:81.7vmin;
+        position: absolute;
+        border-radius: 0% 0% 53% 61% / 0% 0% 41% 35% ;
+    }
+    .left-hand{
+        width: 6vmin;
+        height: 20vmin;
+        background-image: linear-gradient(#d8d812,#efdf21);
+        transform: rotateZ(-25deg);
+        top:45vmin;
+        right:86.7vmin;
+        position: absolute;  
+    }
+    .right-hand-fist{
+        width: 6vmin;
+        height: 4vmin;
+        background-color: black;
+        transform: rotateZ(25deg);
+        top:63vmin;
+        left:65.5vmin;
+        position: absolute;
+        border-radius: 0% 0% 53% 61% / 0% 0% 41% 35% ;
+    }
+    .right-hand-thumb{
+        width: 1.5vmin;
+        height: 3vmin;
+        background-color: black;
+        transform: rotateZ(25deg);
+        top:61.7vmin;
+        left:65vmin;
+        position: absolute;
+        border-radius: 99% 0% 0% 100% / 47% 0% 0% 44%  ;
+    }
+    .left-hand-thumb{
+        width: 1.5vmin;
+        height: 3vmin;
+        background-color: black;
+        transform: rotateZ(-25deg);
+        top:62.5vmin;
+        right:81vmin;
+        position: absolute;
+        border-radius: 0% 92% 100% 0% / 0% 44% 48% 0%   ;
+    }
+    </style> 
+</head>
+
+<body>
+    <div class="container">
+        <div class="minion">
+        <div class="left-hand"></div>
+        <div class="right-hand"></div>
+           <div class="left-hand-fist"></div>
+           <div class="right-hand-fist"></div>
+           <div class="left-hand-thumb"></div>
+           <div class="right-hand-thumb"></div>
+            <div class="body">
+             <div class="band-r"></div>
+              <div class="eye-l">
+                 <div class="white-eye-l"></div>
+                 <div class="brown-part-l"></div>
+                 <div class="black-part-l"></div>
+                  <div class="band-l"></div>
+              </div>
+              <div class="eye-r">
+                 <div class="white-eye-r"></div>
+                 <div class="brown-part-r"></div>
+                 <div class="black-part-r"></div>
+              </div>
+              <div class="mouth">
+                  
+              </div>
+               <div class="outfit"></div>
+               <div class="outfit-between"></div>
+               <div class="strap-l"></div>
+               <div class="strap-r"></div>   
+            </div>
+        </div>
+        <div class="left-leg"></div>
+        <div class="right-leg"></div>
+        <div class="left-shoe"></div>
+        <div class="right-shoe"></div>
+    </div>
+    
+</body>
+</html>
